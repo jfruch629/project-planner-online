@@ -1,0 +1,27 @@
+body {
+  background-color: #4CAF50;
+  color: white;
+}
+
+a,
+a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+ul {
+  list-style: none;
+  display: inline;
+}
+.user-list ul {
+  color: #DC7F3D;
+  background-color: teal;
+  list-style: none;
+  display: inline-block;
+  margin-right: 1em;
+}

@@ -1,0 +1,35 @@
+<h1><%= @project.name %></h1>
+
+<h4><%= @project.description %></h4>
+<br/>
+<h3>Users currently on this project:</h3>
+<br/>
+
+<div class="user-list">
+<ul>
+  <% @project.users.each do |user| %>
+    <li><%= user.first_name %> <%= user.last_name %></li>
+    <p><b>Email: </b><%= user.email %></p>
+    <br/>
+  <% end %>
+</ul>
+
+
+<h3>Tasks Needed to Be Completed:</h3>
+<br/>
+<div class="tasks">
+  <ul>
+    <% @project.tasks.each do |task| %>
+    <li><h4><%= task.name %></h4></li>
+    <% if !(task.user).nil? %>
+      <h5>Assignee: <%= task.user.first_name %> <%= task.user.last_name %> </h5>
+    <% else %>
+      <h5> Someone needs to sign up for this work.. </h5>
+      <% end %>
+    <h6>Description: <%= task.description %></h6>
+    <p>Due: <%= task.due_date %></p>
+
+    <% end %>
+  </ul>
+<br/>
+<a style="text-align:center;" href="/">All Projects</a>

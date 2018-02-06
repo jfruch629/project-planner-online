@@ -1,0 +1,9 @@
+<br/>
+<h3 style="text-align:center;">Projects Currently Being Worked On...</h3>
+<br/>
+
+<ul class="list">
+  <% @projects.each do |project| %>
+    <li><a href="/projects/<%= project.id %>"><%= "#{project.name}" %></a></li>
+  <% end %>
+</ul>
